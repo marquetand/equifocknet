@@ -1,0 +1,38 @@
+# ==========================================
+# EquiFockNet Ignore File
+# ==========================================
+
+# 1. Project-Specific Folders
+# (Keeps local data and model outputs off GitHub)
+data_electrocyclic/
+training_output/
+analysis/
+
+# 2. Large Data & Model Files 
+# (Failsafe in case they are accidentally saved outside the folders above)
+*.db
+*.npz
+*.npy
+*.xyz
+*.pt
+*.pth
+*.ckpt
+
+# 3. Python & Jupyter Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# 4. OS Specific Hidden Files
+.DS_Store
+Thumbs.db
+
+# 5. Environment & IDE Files
+.env
+.venv
+env/
+venv/
+.vscode/
+.idea/

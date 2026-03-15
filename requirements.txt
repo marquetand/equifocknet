@@ -1,0 +1,17 @@
+# Core Scientific & ML Libraries
+numpy>=1.24.0
+scipy>=1.10.0
+torch>=2.0.0
+torchvision
+torchaudio
+pytorch-lightning>=2.0.0
+tensorboard>=2.14.0
+
+# Chemistry & Data Processing
+ase>=3.22.1
+h5py>=3.8.0
+
+# Visualization & Notebooks
+matplotlib>=3.7.0
+ipykernel>=6.20.0
+ipywidgets>=8.0.4
