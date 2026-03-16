@@ -12,6 +12,7 @@ analysis/
 # (Failsafe in case they are accidentally saved outside the folders above)
 *.db
 *.npz
+!phisnet_fork/**/*.npz
 *.npy
 *.xyz
 *.pt
