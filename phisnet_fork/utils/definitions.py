@@ -63,6 +63,12 @@ orbital_conventions = {
         orbital_idx_map={'s': [0], 'p': [1, 2, 0], 'd': [4, 3, 2, 1, 0]},
         orbital_sign_map={'s': [1], 'p': [1, 1, 1], 'd': [1, 1, 1, 1, 1]},
         orbital_order_map={'H': [0, 1], 'C': [0, 1, 2, 3, 4, 5]},
+    ),
+    'molcas_ANO-MB': Namespace(
+        atom_to_orbitals_map={'H': 's', 'C': 'ssp', 'N': 'ssp'}, # <-- Added N
+        orbital_idx_map={'s': [0], 'p': [1, 2, 0]},
+        orbital_sign_map={'s': [1], 'p': [1, 1, 1]},
+        orbital_order_map={'H': [0], 'C': [0, 1, 2], 'N': [0, 1, 2]}, # <-- Added N
     )
 }
 
