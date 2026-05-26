@@ -14,6 +14,16 @@ orbital_definitions = {
     'fulvene_6-31G*': {
         1: np.array([0, 0]),           # H has only 1s, 2s, 2p orbitals
         6: np.array([0, 0, 0, 1, 1, 2])   # C has 1s, 2s, 3s, 2p, 3p, 3d orbitals
+    },
+    'molcas_ANO-MB': {
+        1: np.array([0]),           # H has only 1s orbital
+        6: np.array([0, 0, 1]),     # C has 1s, 2s & 2p orbitals
+        7: np.array([0, 0, 1])      # N has 1s, 2s & 2p orbitals
+    },
+    'molcas_ANO-VDZP': {
+        1: np.array([0, 0, 1]),
+        6: np.array([0, 0, 0, 1, 1, 2]),
+        7: np.array([0, 0, 0, 1, 1, 2])
     }
 }
 
@@ -64,11 +74,18 @@ orbital_conventions = {
         orbital_sign_map={'s': [1], 'p': [1, 1, 1], 'd': [1, 1, 1, 1, 1]},
         orbital_order_map={'H': [0, 1], 'C': [0, 1, 2, 3, 4, 5]},
     ),
+    # Added by us - all apply to Molcas
     'molcas_ANO-MB': Namespace(
-        atom_to_orbitals_map={'H': 's', 'C': 'ssp', 'N': 'ssp'}, # <-- Added N
+        atom_to_orbitals_map={'H': 's', 'C': 'ssp', 'N': 'ssp'},
         orbital_idx_map={'s': [0], 'p': [1, 2, 0]},
         orbital_sign_map={'s': [1], 'p': [1, 1, 1]},
-        orbital_order_map={'H': [0], 'C': [0, 1, 2], 'N': [0, 1, 2]}, # <-- Added N
+        orbital_order_map={'H': [0], 'C': [0, 1, 2], 'N': [0, 1, 2]},
+    ),
+    'molcas_ANO-VDZP': Namespace(
+        atom_to_orbitals_map={'H': 'ssp', 'C': 'sssppd', 'N': 'sssppd'},
+        orbital_idx_map={'s': [0], 'p': [1, 2, 0], 'd': [0, 1, 2, 3, 4]},
+        orbital_sign_map={'s': [1], 'p': [1, 1, 1], 'd': [1, 1, 1, 1, 1]},
+        orbital_order_map={'H': [0, 1, 2], 'C': [0, 1, 2, 3, 4, 5], 'N': [0, 1, 2, 3, 4, 5]},
     )
 }
 
@@ -93,4 +110,17 @@ reverse_orbital_conventions = {
         orbital_sign_map={'s': [1], 'p': [1, 1, 1], 'd': [1, 1, 1, 1, 1]},
         orbital_order_map={'H': [0, 1], 'C': [0, 1, 2, 3, 4, 5]},
     ),
+    # Added by us - all apply to Molcas
+    'molcas_ANO-MB': Namespace(
+        atom_to_orbitals_map={'H': 's', 'C': 'ssp', 'N': 'ssp'},
+        orbital_idx_map={'s': [0], 'p': [2, 0, 1]},
+        orbital_sign_map={'s': [1], 'p': [1, 1, 1]},
+        orbital_order_map={'H': [0], 'C': [0, 1, 2], 'N': [0, 1, 2]},
+    ),
+    'molcas_ANO-VDZP': Namespace(
+        atom_to_orbitals_map={'H': 'ssp', 'C': 'sssppd', 'N': 'sssppd'},
+        orbital_idx_map={'s': [0], 'p': [2, 0, 1], 'd': [0, 1, 2, 3, 4]},
+        orbital_sign_map={'s': [1], 'p': [1, 1, 1], 'd': [1, 1, 1, 1, 1]},
+        orbital_order_map={'H': [0, 1, 2], 'C': [0, 1, 2, 3, 4, 5], 'N': [0, 1, 2, 3, 4, 5]},
+    )
 }
